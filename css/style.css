@@ -245,6 +245,66 @@
     box-shadow: 0 0 45px rgba(0, 0, 0, .06);
 }
 
+/*** About ***/
+.team-scroll-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping of child elements */
+    padding: 20px 0; /* Optional: add some vertical padding */
+}
+
+.team-row {
+    display: inline-flex; /* Allow items to sit next to each other in a row */
+}
+
+.team-item {
+    margin-right: 20px; /* Space between items */
+}
+
+.team-item:last-child {
+    margin-right: 0; /* Remove margin from last item */
+}
+
+.team-item img {
+    width: 200px; /* Set the desired width */
+    height: 200px; /* Set the desired height */
+    object-fit: cover; /* Ensure the image covers the area */
+    border-radius: 50%; /* Make the image rounded */
+    transition: transform 0.3s; /* Optional: add a hover effect */
+}
+
+.team-item img:hover {
+    transform: scale(1.05); /* Optional: scale up on hover */
+}
+
+.team-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+}
+
+.team-text h5,
+.team-text p {
+    margin: 0; /* Remove default margin for consistent spacing */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .team-scroll-container {
+        overflow-x: hidden; /* Disable horizontal scroll on mobile */
+        overflow-y: auto; /* Enable vertical scroll if necessary */
+    }
+
+    .team-row {
+        display: block; /* Stack items vertically on mobile */
+    }
+
+    .team-item {
+        margin: 10px 0; /* Space between items vertically */
+        text-align: center; /* Center text for each item */
+    }
+}
+
+
 
 /*** Donate ***/
 .donate {
