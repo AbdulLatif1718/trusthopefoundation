@@ -3,34 +3,127 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ChariTeam - Free Nonprofit Website Template</title>
+    <title>trusthopefoundation - Gallery</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
         rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* Gallery Styles */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Lightbox styles */
+        .lightbox-image {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox-image img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .lightbox-image:target {
+            display: flex;
+        }
+
+
+        /* Modal (hidden by default) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            background-color: rgba(0, 0, 0, 0.7);
+            /* Black with opacity */
+            padding-top: 0;
+            /* No padding on top */
+            text-align: center;
+            justify-content: center;
+            /* Center the image */
+            align-items: center;
+            /* Vertically center the image */
+        }
+
+        /* Modal content (the full image) */
+        .modal-content {
+            max-width: 100%;
+            /* Make sure the image can take full width */
+            max-height: 100%;
+            /* Make sure the image can take full height */
+            margin: 0;
+            display: block;
+            object-fit: contain;
+            /* Preserve aspect ratio */
+            max-width: 90%;
+            /* Ensure the image is scaled down, but still fills the screen */
+            max-height: 90%;
+            /* Ensure the image fits within the screen */
+        }
+
+        /* Close button */
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #f1f1f1;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,7 +133,6 @@
         <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
-
 
     <!-- Navbar Start -->
     <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
@@ -60,7 +152,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <h1 class="fw-bold text-primary m-0">Chari<span class="text-white">Team</span></h1>
+                <h1 class="fw-bold text-primary m-0">Trust<span class="text-white">Hope</span></h1>
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
@@ -78,7 +170,7 @@
                             <a href="donate.html" class="dropdown-item">Donate</a>
                             <a href="team.html" class="dropdown-item">Our Team</a>
                             <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item active">Galary</a>
+                            <a href="gallery.html" class="dropdown-item active">Gallery</a>
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
@@ -96,45 +188,92 @@
     </div>
     <!-- Navbar End -->
 
-
     <!-- Page Header Start -->
     <div class="container-fluid page-header mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Galary</h1>
+            <h1 class="display-4 text-white animated slideInDown mb-4">Gallery</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
                     <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Galary</li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Gallery</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
-
-    <!-- 404 Start -->
+    <!-- Gallery Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to
-                        our home page or try to use a search?</p>
-                    <a class="btn btn-outline-primary py-2 px-3" href="">
-                        Go Back To Home
-                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
+        <div class="container">
+            <div class="gallery">
+                <!-- Gallery images -->
+                <img src="img/photo1.jpg" alt="Gallery Image 1" class="gallery-image">
+                <img src="img/photo2.jpg" alt="Gallery Image 2" class="gallery-image">
+                <img src=" img/photo3.jpg" alt="Gallery Image 3" class="gallery-image">
+                <img src=" img/photo4.jpg" alt="Gallery Image 4" class="gallery-image">
+                <img src=" img/photo5.jpg" alt="Gallery Image 5" class="gallery-image">
+                <img src=" img/photo6.jpg" alt="Gallery Image 6" class="gallery-image">
+                <img src=" img/photo7.jpg" alt="Gallery Image 7" class="gallery-image">
+                <img src=" img/photo8.jpg" alt="Gallery Image 8" class="gallery-image">
+                <img src=" img/photo9.jpg" alt="Gallery Image 9" class="gallery-image">
+                <img src=" img/photo10.jpg" alt="Gallery Image 10" class="gallery-image">
+                <img src=" img/photo11.jpg" alt="Gallery Image 11" class="gallery-image">
+                <img src=" img/photo12.jpg" alt="Gallery Image 12" class="gallery-image">
+                <img src=" img/photo13.jpg" alt="Gallery Image 13" class="gallery-image">
+                <img src=" img/photo14.jpg" alt="Gallery Image 14" class="gallery-image">
+                <img src=" img/photo15.jpg" alt="Gallery Image 15" class="gallery-image">
+                <img src=" img/photo16.jpg" alt="Gallery Image 16" class="gallery-image">
+                <img src=" img/photo17.jpg" alt="Gallery Image 17" class="gallery-image">
+                <img src=" img/photo18.jpg" alt="Gallery Image 18" class="gallery-image">
+                <img src=" img/photo19.jpg" alt="Gallery Image 19" class="gallery-image">
+                <img src=" img/photo20.jpg" alt="Gallery Image 20" class="gallery-image">
+                <img src=" img/photo21.jpg" alt="Gallery Image 21" class="gallery-image">
+                <img src=" img/photo22.jpg" alt="Gallery Image 22" class="gallery-image">
+                <img src=" img/photo23.jpg" alt="Gallery Image 23" class="gallery-image">
+                <img src=" img/photo24.jpg" alt="Gallery Image 24" class="gallery-image">
+                <img src=" img/photo25.jpg" alt="Gallery Image 25" class="gallery-image">
+                <img src=" img/photo26.jpg" alt="Gallery Image 26" class="gallery-image">
+                <img src=" img/photo27.jpg" alt="Gallery Image 27" class="gallery-image">
+                <img src=" img/photo28.jpg" alt="Gallery Image 28" class="gallery-image">
+                <img src=" img/photo29.jpg" alt="Gallery Image 29" class="gallery-image">
+                <img src=" img/photo30.jpg" alt="Gallery Image 30" class="gallery-image">
+                <img src=" img/photo31.jpg" alt="Gallery Image 31" class="gallery-image">
+                <img src=" img/photo32.jpg" alt="Gallery Image 32" class="gallery-image">
+                <img src=" img/photo33.jpg" alt="Gallery Image 33" class="gallery-image">
             </div>
         </div>
     </div>
-    <!-- 404 End -->
+    <!-- Gallery End -->
+    <div id=" imageModal" class="modal">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content" id="fullImage">
+        <div id="caption"></div>
+    </div>
 
+    <!-- Lightbox for Images -->
+    <div id="img1" class="lightbox-image">
+        <img src="img/photo1.jpg" alt="Gallery Image 1">
+        <span class="close-btn">×</span>
+    </div>
+    <div id="img2" class="lightbox-image">
+        <img src="img/photo2.jpg" alt="Gallery Image 2">
+        <span class="close-btn">×</span>
+    </div>
+    <div id="img3" class="lightbox-image">
+        <img src="img/photo3.jpg" alt="Gallery Image 3">
+        <span class="close-btn">×</span>
+    </div>
+    <div id="img4" class="lightbox-image">
+        <img src="img/photo4.jpg" alt="Gallery Image 3">
+        <span class="close-btn">×</span>
+    </div>
+    <div id="img5" class="lightbox-image">
+        <img src="img/photo5.jpg" alt="Gallery Image 3">
+        <span class="close-btn">×</span>
+    </div>
+
+    <!-- Repeat for all 30 images -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -142,7 +281,8 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h1 class="fw-bold text-primary mb-4">Chari<span class="text-white">Team</span></h1>
-                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
+                    <p>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
+                        sed
                         stet lorem sit clita</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-square me-1" href=""><i class="fab fa-twitter"></i></a>
@@ -183,21 +323,17 @@
                         &copy; <a href="#">trusthopefoundation</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        <!-- This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. -->
                         <span style="color: rgb(24, 23, 23);">Designed By <a href="https://htmlcodex.com"
                                 style="color: rgb(20, 20, 20); text-decoration: none;">HTML Codex</a></span>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -207,9 +343,41 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/parallax/parallax.min.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+
+        // Get the modal
+        var modal = document.getElementById("imageModal");
+
+        // Get the image elements in the gallery
+        var images = document.querySelectorAll(".gallery img");
+
+        // Get the modal content (image)
+        var modalImage = document.getElementById("fullImage");
+
+        // Get the caption (optional)
+        var captionText = document.getElementById("caption");
+
+        // Get the close button
+        var closeBtn = document.getElementsByClassName("close-btn")[0];
+
+        // Loop through all images and add click event listeners
+        images.forEach(function (image) {
+            image.onclick = function () {
+                modal.style.display = "block"; // Show the modal
+                modalImage.src = this.src; // Set the source of the full-size image
+                captionText.innerHTML = this.alt; // Optionally, set the caption
+            };
+        });
+
+        // When the user clicks on the close button, close the modal
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+
+    </script>
 </body>
 
 </html>
