@@ -51,10 +51,13 @@
             </div>
             <div class="col-lg-6 px-5 text-end">
                 <small>Follow us:</small>
-                <a class="text-white-50 ms-3" href="https://www.facebook.com/share/1SGkAvKVV1/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/share/1SGkAvKVV1/?mibextid=wwXIfr"><i
+                        class="fab fa-facebook-f"></i></a>
                 <a class="text-white-50 ms-3" href=""><i class="fab fa-twitter"></i></a>
                 <!-- <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a> -->
-                <a class="text-white-50 ms-3" href="https://www.instagram.com/trusthopefoundation2024/profilecard/?igsh=MWhhNXFrdTQwamg2cQ=="><i class="fab fa-instagram"></i></a>
+                <a class="text-white-50 ms-3"
+                    href="https://www.instagram.com/trusthopefoundation2024/profilecard/?igsh=MWhhNXFrdTQwamg2cQ=="><i
+                        class="fab fa-instagram"></i></a>
             </div>
         </div>
 
@@ -129,7 +132,7 @@
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="h-100 bg-secondary p-5">
-                        <form>
+                        <form id="donationForm">
                             <div class="row g-3">
                                 <div class="col-12">
                                     <div class="form-floating">
@@ -138,13 +141,37 @@
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
+
+                                <!-- Toggle for Email or Phone -->
                                 <div class="col-12">
+                                    <div class="btn-group" role="group" aria-label="Select contact type">
+                                        <input type="radio" class="btn-check" name="contactType" id="emailRadio"
+                                            checked>
+                                        <label class="btn btn-light" for="emailRadio">Email</label>
+
+                                        <input type="radio" class="btn-check" name="contactType" id="phoneRadio">
+                                        <label class="btn btn-light" for="phoneRadio">Phone</label>
+                                    </div>
+                                </div>
+
+                                <!-- Email input (visible when Email is selected) -->
+                                <div class="col-12" id="emailInput">
                                     <div class="form-floating">
                                         <input type="email" class="form-control bg-light border-0" id="email"
                                             placeholder="Your Email">
-                                        <label for="email">Your Email</label>
+                                        <label for="email" id="emailLabel">Your Email</label>
                                     </div>
                                 </div>
+
+                                <!-- Phone input (visible when Phone is selected) -->
+                                <div class="col-12" id="phoneInput" style="display: none;">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-light border-0" id="phone"
+                                            placeholder="Your Phone Number">
+                                        <label for="phone" id="phoneLabel">Your Phone Number</label>
+                                    </div>
+                                </div>
+
                                 <div class="col-12">
                                     <div class="btn-group d-flex justify-content-around">
                                         <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked>
@@ -156,10 +183,10 @@
                                         <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
                                         <label class="btn btn-light py-3" for="btnradio3">₵30</label>
                                     </div>
-
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary px-5" style="height: 60px;">
+                                    <button type="button" class="btn btn-primary px-5" style="height: 60px;"
+                                        onclick="payWithPaystack()">
                                         Donate Now
                                         <div
                                             class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
@@ -175,7 +202,6 @@
         </div>
     </div>
     <!-- Donate End -->
-
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -250,6 +276,65 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Paystack Script -->
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+
+
+    <script>
+        // Toggle between email and phone input fields and change labels accordingly
+        document.getElementById('emailRadio').addEventListener('change', function () {
+            document.getElementById('emailInput').style.display = 'block';
+            document.getElementById('phoneInput').style.display = 'none';
+            document.getElementById('emailLabel').textContent = "Your Email";  // Set label to email
+            document.getElementById('phoneLabel').textContent = "Your Phone Number";  // Set label to phone
+        });
+        document.getElementById('phoneRadio').addEventListener('change', function () {
+            document.getElementById('emailInput').style.display = 'none';
+            document.getElementById('phoneInput').style.display = 'block';
+            document.getElementById('emailLabel').textContent = "Your Email (optional)";  // Adjust label to show optional for email
+            document.getElementById('phoneLabel').textContent = "Your Phone Number (required)";  // Adjust label to emphasize phone number
+        });
+
+        function payWithPaystack() {
+            const name = document.getElementById('name').value;
+
+            // Get the selected contact method (email or phone)
+            const contactType = document.querySelector('input[name="contactType"]:checked').id;
+
+            // Collect the respective contact info based on selection
+            let contactInfo;
+            if (contactType === 'emailRadio') {
+                contactInfo = document.getElementById('email').value;
+            } else {
+                contactInfo = document.getElementById('phone').value;
+            }
+
+            // Get the selected donation amount
+            const selectedAmount = document.querySelector('input[name="btnradio"]:checked').nextElementSibling.textContent;
+            const amountInKobo = parseInt(selectedAmount.replace('₵', '').trim()) * 100;  // Convert cedi to kobo (1 Cedi = 100 Kobo)
+
+            const handler = PaystackPop.setup({
+                key: 'pk_test_9304447d61ec9852128c14d91f1c73b9654a1164',  // Replace with your actual Paystack public key
+                [contactType === 'emailRadio' ? 'email' : 'phone']: contactInfo,  // Conditionally use email or phone
+                amount: amountInKobo,  // The amount in kobo
+                currency: 'GHS',  // Set to Ghanaian Cedi
+                firstname: name,
+                lastname: '',  // Optional if you want to include a last name
+                onClose: function () {
+                    alert('Transaction was not completed.');
+                },
+                callback: function (response) {
+                    // You can handle success here, e.g., showing a confirmation message
+                    if (response.status === 'success') {
+                        alert('Thank you for your donation! Your payment was successful.');
+                    }
+                }
+            });
+
+            handler.openIframe();
+        }
+    </script>
 </body>
 
 </html>
