@@ -1,223 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Trust Hope Foundation - Home-page</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
     <meta
-        content="Trust Hope Foundation is a non-profit organization dedicated to providing holistic support for a brighter future. We offer education, vocational training, healthcare, and emotional well-being support to empower orphans and individuals with disabilities to achieve independence and integrate into society."
-        name="description">
+      content="Trust Hope Foundation is a non-profit organization dedicated to providing holistic support for a brighter future. We offer education, vocational training, healthcare, and emotional well-being support to empower orphans and individuals with disabilities to achieve independence and integrate into society."
+      name="description"
+    />
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Trust Hope Foundation - Home-page" />
-    <meta property="og:description"
-        content="Trust Hope Foundation is a non-profit organization dedicated to providing holistic support for a brighter future. We offer education, vocational training, healthcare, and emotional well-being support to empower orphans and individuals with disabilities to achieve independence and integrate into society." />
-    <meta property="og:image" content="https://trusthopefoundation.com/images/preview-image.jpg" />
+    <meta
+      property="og:description"
+      content="Trust Hope Foundation is a non-profit organization dedicated to providing holistic support for a brighter future. We offer education, vocational training, healthcare, and emotional well-being support to empower orphans and individuals with disabilities to achieve independence and integrate into society."
+    />
+    <meta
+      property="og:image"
+      content="https://trusthopefoundation.com/images/preview-image.jpg"
+    />
     <meta property="og:url" content="https://trusthopefoundation.com" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Trust Hope Foundation" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Add this CSS in the <head> section -->
+    <style>
+      .birthday-modal {
+        animation: fadeIn 0.5s;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .birthday-card {
+        background: linear-gradient(135deg, #ffffff, #fff3e6);
+        border-radius: 15px;
+        border: 3px solid #ff9900;
+      }
+      .birthday-image {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border: 4px solid #ff9900;
+        margin: -100px auto 20px;
+      }
+      .birthday-text {
+        font-family: "Saira", sans-serif;
+        color: #2c3e50;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary" role="status"></div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="spinner-grow text-primary" role="status"></div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
-            <div class="col-lg-6 px-5 text-start">
-                <small><i class="fa fa-map-marker-alt me-2"></i>Kumasi, Ghana</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>info@trusthopefoundation.org</small>
-            </div>
-            <div class="col-lg-6 px-5 text-end">
-                <small>Follow us:</small>
-                <a class="text-white-50 ms-3" href="https://www.facebook.com/share/1SGkAvKVV1/?mibextid=wwXIfr"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a class="text-white-50 ms-3" href=""><i class="fab fa-twitter"></i></a>
-                <!-- <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a> -->
-                <a class="text-white-50 ms-3"
-                    href="https://www.instagram.com/trusthopefoundation2024/profilecard/?igsh=MWhhNXFrdTQwamg2cQ=="><i
-                        class="fab fa-instagram"></i></a>
-            </div>
+    <div
+      class="container-fluid fixed-top px-0 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div
+        class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex"
+      >
+        <div class="col-lg-6 px-5 text-start">
+          <small><i class="fa fa-map-marker-alt me-2"></i>Kumasi, Ghana</small>
+          <small class="ms-4"
+            ><i class="fa fa-envelope me-2"></i
+            >info@trusthopefoundation.org</small
+          >
         </div>
+        <div class="col-lg-6 px-5 text-end">
+          <small>Follow us:</small>
+          <a
+            class="text-white-50 ms-3"
+            href="https://www.facebook.com/share/1SGkAvKVV1/?mibextid=wwXIfr"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a class="text-white-50 ms-3" href=""
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <!-- <a class="text-white-50 ms-3" href=""><i class="fab fa-linkedin-in"></i></a> -->
+          <a
+            class="text-white-50 ms-3"
+            href="https://www.instagram.com/trusthopefoundation2024/profilecard/?igsh=MWhhNXFrdTQwamg2cQ=="
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
 
-        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <img src="img/logo1.png" alt="TrustHope Logo"
-                    style="max-height: 60px; margin-right: 10px; padding-bottom:12px">
-                <h1 class="fw-bold text-primary m-0 d-inline">Trust<span class="text-white">Hope</span></h1>
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="causes.html" class="nav-item nav-link">Causes</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="service.html" class="dropdown-item">Service</a>
-                            <a href="donate.html" class="dropdown-item">Donate</a>
-                            <a href="team.html" class="dropdown-item">Our Team</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="gallery.html" class="dropdown-item">Galary</a>
-                        </div>
-                    </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="d-none d-lg-flex ms-2">
-                    <a class="btn btn-outline-primary py-2 px-3" href="donate.html">
-                        Donate Now
-                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                            <i class="fa fa-arrow-right"></i>
-                        </div>
-                    </a>
-                </div>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+          <img
+            src="img/logo1.png"
+            alt="TrustHope Logo"
+            style="max-height: 60px; margin-right: 10px; padding-bottom: 12px"
+          />
+          <h1 class="fw-bold text-primary m-0 d-inline">
+            Trust<span class="text-white">Hope</span>
+          </h1>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler me-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="causes.html" class="nav-item nav-link">Causes</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Pages</a
+              >
+              <div class="dropdown-menu m-0">
+                <a href="service.html" class="dropdown-item">Service</a>
+                <a href="donate.html" class="dropdown-item">Donate</a>
+                <a href="team.html" class="dropdown-item">Our Team</a>
+                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                <a href="gallery.html" class="dropdown-item">Galary</a>
+              </div>
             </div>
-        </nav>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <div class="d-none d-lg-flex ms-2">
+            <a class="btn btn-outline-primary py-2 px-3" href="donate.html">
+              Donate Now
+              <div
+                class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2"
+              >
+                <i class="fa fa-arrow-right"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
     </div>
     <!-- Navbar End -->
 
-
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5">
-        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="w-100" src="img/carousel-1.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Empowering Orphans and
-                                        Individuals with Disabilities</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Join us in transforming
-                                        lives through education, healthcare, and emotional support.</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="about.html">
-                                        Learn More
-                                        <div
-                                            class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="w-100" src="img/carousel-1.jpg" alt="Image" />
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-7 pt-5">
+                    <h1 class="display-4 text-white mb-3 animated slideInDown">
+                      Empowering Orphans and Individuals with Disabilities
+                    </h1>
+                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">
+                      Join us in transforming lives through education,
+                      healthcare, and emotional support.
+                    </p>
+                    <a
+                      class="btn btn-primary py-2 px-3 animated slideInDown"
+                      href="about.html"
+                    >
+                      Learn More
+                      <div
+                        class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2"
+                      >
+                        <i class="fa fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="w-100" src="img/carousel-2.jpg" alt="Image">
-                    <div class="carousel-caption">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-7 pt-5">
-                                    <h1 class="display-4 text-white mb-3 animated slideInDown">Together, We Can Make a
-                                        Difference</h1>
-                                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">Your support helps us
-                                        provide vital resources to those in need. Every contribution counts!</p>
-                                    <a class="btn btn-primary py-2 px-3 animated slideInDown" href="donate.html">
-                                        Donate Now
-                                        <div
-                                            class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+          </div>
+          <div class="carousel-item">
+            <img class="w-100" src="img/carousel-2.jpg" alt="Image" />
+            <div class="carousel-caption">
+              <div class="container">
+                <div class="row justify-content-center">
+                  <div class="col-lg-7 pt-5">
+                    <h1 class="display-4 text-white mb-3 animated slideInDown">
+                      Together, We Can Make a Difference
+                    </h1>
+                    <p class="fs-5 text-white-50 mb-5 animated slideInDown">
+                      Your support helps us provide vital resources to those in
+                      need. Every contribution counts!
+                    </p>
+                    <a
+                      class="btn btn-primary py-2 px-3 animated slideInDown"
+                      href="donate.html"
+                    >
+                      Donate Now
+                      <div
+                        class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2"
+                      >
+                        <i class="fa fa-arrow-right"></i>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#header-carousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#header-carousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
     <!-- Carousel End -->
 
-
     <!-- About Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
-                        <img class="position-absolute w-100 h-100 pt-5 pe-5" src="img/about11.png" alt=""
-                            style="object-fit: cover;">
-                        <img class="position-absolute top-0 end-0 bg-white ps-2 pb-2" src="img/about-2.jpg" alt=""
-                            style="width: 200px; height: 200px;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">About Us</div>
-                        <h1 class="display-6 mb-5">Empowering Orphans and Individuals with Disabilities</h1>
-                        <div class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4">
-                            <p class="text-dark mb-2">Our foundation is dedicated to empowering orphans and individuals
-                                with disabilities through education, healthcare, and emotional support.</p>
-                            <span class="text-primary">Nimoh Jephter, Founder</span>
-                        </div>
-                        <p class="mb-5">We strive to create a nurturing environment that fosters independence, dignity,
-                            and hope, enabling them to lead fulfilling lives and contribute to society.</p>
-                        <a class="btn btn-primary py-2 px-3 me-3" href="">
-                            Learn More
-                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
-                        <a class="btn btn-outline-primary py-2 px-3" href="">
-                            Contact Us
-                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
-                                <i class="fa fa-arrow-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div
+              class="position-relative overflow-hidden h-100"
+              style="min-height: 400px"
+            >
+              <img
+                class="position-absolute w-100 h-100 pt-5 pe-5"
+                src="img/about11.png"
+                alt=""
+                style="object-fit: cover"
+              />
+              <img
+                class="position-absolute top-0 end-0 bg-white ps-2 pb-2"
+                src="img/about-2.jpg"
+                alt=""
+                style="width: 200px; height: 200px"
+              />
             </div>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="h-100">
+              <div
+                class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3"
+              >
+                About Us
+              </div>
+              <h1 class="display-6 mb-5">
+                Empowering Orphans and Individuals with Disabilities
+              </h1>
+              <div
+                class="bg-light border-bottom border-5 border-primary rounded p-4 mb-4"
+              >
+                <p class="text-dark mb-2">
+                  Our foundation is dedicated to empowering orphans and
+                  individuals with disabilities through education, healthcare,
+                  and emotional support.
+                </p>
+                <span class="text-primary">Nimoh Jephter, Founder</span>
+              </div>
+              <p class="mb-5">
+                We strive to create a nurturing environment that fosters
+                independence, dignity, and hope, enabling them to lead
+                fulfilling lives and contribute to society.
+              </p>
+              <a class="btn btn-primary py-2 px-3 me-3" href="">
+                Learn More
+                <div
+                  class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2"
+                >
+                  <i class="fa fa-arrow-right"></i>
+                </div>
+              </a>
+              <a class="btn btn-outline-primary py-2 px-3" href="">
+                Contact Us
+                <div
+                  class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2"
+                >
+                  <i class="fa fa-arrow-right"></i>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- About End -->
-
 
     <!-- Causes 
     <div class="container-xxl bg-light my-5 py-5">
@@ -337,344 +465,589 @@
     </div>
     <!-- Causes End -->
 
-
     <!-- Service Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">What We Do</div>
-                <h1 class="display-6 mb-5">Holistic Support for a Brighter Future</h1>
-                <p>We provide education, vocational training, healthcare, and emotional well-being support to empower
-                    orphans and individuals with disabilities to achieve independence and integrate into society.</p>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item bg-white text-center rounded p-4">
-                        <div class="position-relative mb-4">
-                            <i class="fa fa-book-open fa-2x text-primary"></i>
-                        </div>
-                        <h5 class="mb-3">Education</h5>
-                        <p>Providing access to quality education to foster growth and development.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item bg-white text-center rounded p-4">
-                        <div class="position-relative mb-4">
-                            <i class="fa fa-heartbeat fa-2x text-primary"></i>
-                        </div>
-                        <h5 class="mb-3">Healthcare</h5>
-                        <p>Offering healthcare services to ensure physical and mental well-being.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white text-center rounded p-4">
-                        <div class="position-relative mb-4">
-                            <i class="fa fa-hand-holding-heart fa-2x text-primary"></i>
-                        </div>
-                        <h5 class="mb-3">Emotional Support</h5>
-                        <p>Providing emotional support to help build resilience and self-esteem.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div
+          class="text-center mx-auto mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="max-width: 500px"
+        >
+          <div
+            class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3"
+          >
+            What We Do
+          </div>
+          <h1 class="display-6 mb-5">Holistic Support for a Brighter Future</h1>
+          <p>
+            We provide education, vocational training, healthcare, and emotional
+            well-being support to empower orphans and individuals with
+            disabilities to achieve independence and integrate into society.
+          </p>
         </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-item bg-white text-center rounded p-4">
+              <div class="position-relative mb-4">
+                <i class="fa fa-book-open fa-2x text-primary"></i>
+              </div>
+              <h5 class="mb-3">Education</h5>
+              <p>
+                Providing access to quality education to foster growth and
+                development.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="service-item bg-white text-center rounded p-4">
+              <div class="position-relative mb-4">
+                <i class="fa fa-heartbeat fa-2x text-primary"></i>
+              </div>
+              <h5 class="mb-3">Healthcare</h5>
+              <p>
+                Offering healthcare services to ensure physical and mental
+                well-being.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="service-item bg-white text-center rounded p-4">
+              <div class="position-relative mb-4">
+                <i class="fa fa-hand-holding-heart fa-2x text-primary"></i>
+              </div>
+              <h5 class="mb-3">Emotional Support</h5>
+              <p>
+                Providing emotional support to help build resilience and
+                self-esteem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Service End -->
 
-
     <!-- Donate Start -->
     <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Donate Now</div>
-                    <h1 class="display-6 mb-5">Thank You for Helping Us Make a Difference</h1>
-                    <p class="mb-0">Your generosity supports local communities in need. By donating, you are helping
-                        provide essential resources, healthcare, education, and much more. Every cedi counts, and your
-                        contribution brings us closer to achieving lasting change. Together, we can make a better future
-                        for all. Thank you for your commitment to improving lives in Ghana.</p>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="h-100 bg-secondary p-5">
-                        <form id="donationForm">
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-light border-0" id="name"
-                                            placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-
-                                <!-- Toggle for Email or Phone -->
-                                <div class="col-12">
-                                    <div class="btn-group" role="group" aria-label="Select contact type">
-                                        <input type="radio" class="btn-check" name="contactType" id="emailRadio"
-                                            checked>
-                                        <label class="btn btn-light" for="emailRadio">Email</label>
-
-                                        <input type="radio" class="btn-check" name="contactType" id="phoneRadio">
-                                        <label class="btn btn-light" for="phoneRadio">Phone</label>
-                                    </div>
-                                </div>
-
-                                <!-- Email input (visible when Email is selected) -->
-                                <div class="col-12" id="emailInput">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control bg-light border-0" id="email"
-                                            placeholder="Your Email">
-                                        <label for="email" id="emailLabel">Your Email</label>
-                                    </div>
-                                </div>
-
-                                <!-- Phone input (visible when Phone is selected) -->
-                                <div class="col-12" id="phoneInput" style="display: none;">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control bg-light border-0" id="phone"
-                                            placeholder="Your Phone Number">
-                                        <label for="phone" id="phoneLabel">Your Phone Number</label>
-                                    </div>
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="btn-group d-flex justify-content-around">
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked>
-                                        <label class="btn btn-light py-3" for="btnradio1">₵10</label>
-
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
-                                        <label class="btn btn-light py-3" for="btnradio2">₵20</label>
-
-                                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
-                                        <label class="btn btn-light py-3" for="btnradio3">₵30</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button type="button" class="btn btn-primary px-5" style="height: 60px;"
-                                        onclick="payWithPaystack()">
-                                        Donate Now
-                                        <div
-                                            class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
-                                            <i class="fa fa-arrow-right"></i>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+            <div
+              class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3"
+            >
+              Donate Now
             </div>
+            <h1 class="display-6 mb-5">
+              Thank You for Helping Us Make a Difference
+            </h1>
+            <p class="mb-0">
+              Your generosity supports local communities in need. By donating,
+              you are helping provide essential resources, healthcare,
+              education, and much more. Every cedi counts, and your contribution
+              brings us closer to achieving lasting change. Together, we can
+              make a better future for all. Thank you for your commitment to
+              improving lives in Ghana.
+            </p>
+          </div>
+          <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+            <div class="h-100 bg-secondary p-5">
+              <form id="donationForm">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0"
+                        id="name"
+                        placeholder="Your Name"
+                      />
+                      <label for="name">Your Name</label>
+                    </div>
+                  </div>
+
+                  <!-- Toggle for Email or Phone -->
+                  <div class="col-12">
+                    <div
+                      class="btn-group"
+                      role="group"
+                      aria-label="Select contact type"
+                    >
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="contactType"
+                        id="emailRadio"
+                        checked
+                      />
+                      <label class="btn btn-light" for="emailRadio"
+                        >Email</label
+                      >
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="contactType"
+                        id="phoneRadio"
+                      />
+                      <label class="btn btn-light" for="phoneRadio"
+                        >Phone</label
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Email input (visible when Email is selected) -->
+                  <div class="col-12" id="emailInput">
+                    <div class="form-floating">
+                      <input
+                        type="email"
+                        class="form-control bg-light border-0"
+                        id="email"
+                        placeholder="Your Email"
+                      />
+                      <label for="email" id="emailLabel">Your Email</label>
+                    </div>
+                  </div>
+
+                  <!-- Phone input (visible when Phone is selected) -->
+                  <div class="col-12" id="phoneInput" style="display: none">
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control bg-light border-0"
+                        id="phone"
+                        placeholder="Your Phone Number"
+                      />
+                      <label for="phone" id="phoneLabel"
+                        >Your Phone Number</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="btn-group d-flex justify-content-around">
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="btnradio"
+                        id="btnradio1"
+                        checked
+                      />
+                      <label class="btn btn-light py-3" for="btnradio1"
+                        >₵10</label
+                      >
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="btnradio"
+                        id="btnradio2"
+                      />
+                      <label class="btn btn-light py-3" for="btnradio2"
+                        >₵20</label
+                      >
+
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="btnradio"
+                        id="btnradio3"
+                      />
+                      <label class="btn btn-light py-3" for="btnradio3"
+                        >₵30</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button
+                      type="button"
+                      class="btn btn-primary px-5"
+                      style="height: 60px"
+                      onclick="payWithPaystack()"
+                    >
+                      Donate Now
+                      <div
+                        class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2"
+                      >
+                        <i class="fa fa-arrow-right"></i>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Donate End -->
 
-
-
     <!-- Team Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Team Members</div>
-                <h1 class="display-6 mb-5">Let's Meet With Our Ordinary Soldiers</h1>
-            </div>
-            <div class="team-scroll-container">
-                <div class="team-row">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/mastercard.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Nimoh Jephter</h5>
-                            <p class="text-primary">Founder</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/kate.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Akowuah Kate</h5>
-                            <p class="text-primary">Organizer</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/cecelia.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Cecilia Nimoh</h5>
-                            <p class="text-primary">Treasure</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/prince1.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Prince Minkah Berchman</h5>
-                            <p class="text-primary">Advisor</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/latifpic.jpg" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Sulley Abdul Latif</h5>
-                            <p class="text-primary">Web and IT Solutions Manager</p>
-                            <div class="team-social text-center">
-                                <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div
+          class="text-center mx-auto mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="max-width: 500px"
+        >
+          <div
+            class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3"
+          >
+            Team Members
+          </div>
+          <h1 class="display-6 mb-5">Let's Meet With Our Ordinary Soldiers</h1>
         </div>
+        <div class="team-scroll-container">
+          <div class="team-row">
+            <div class="team-item position-relative rounded overflow-hidden">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/mastercard.jpg" alt="" />
+              </div>
+              <div class="team-text bg-light text-center p-4">
+                <h5>Nimoh Jephter</h5>
+                <p class="text-primary">President</p>
+                <div class="team-social text-center">
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-item position-relative rounded overflow-hidden">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/nimo jesus.JPG" alt="" />
+              </div>
+              <div class="team-text bg-light text-center p-4">
+                <h5>Nimoh Jesus</h5>
+                <p class="text-primary">Founder</p>
+                <div class="team-social text-center">
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-item position-relative rounded overflow-hidden">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/kate.jpg" alt="" />
+              </div>
+              <div class="team-text bg-light text-center p-4">
+                <h5>Akowuah Kate</h5>
+                <p class="text-primary">Organizer</p>
+                <div class="team-social text-center">
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-item position-relative rounded overflow-hidden">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/cecelia.jpg" alt="" />
+              </div>
+              <div class="team-text bg-light text-center p-4">
+                <h5>Cecilia Nimoh</h5>
+                <p class="text-primary">Treasure</p>
+                <div class="team-social text-center">
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-item position-relative rounded overflow-hidden">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/prince1.jpg" alt="" />
+              </div>
+              <div class="team-text bg-light text-center p-4">
+                <h5>Prince Minkah Berchman</h5>
+                <p class="text-primary">Advisor</p>
+                <div class="team-social text-center">
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="team-item position-relative rounded overflow-hidden">
+              <div class="overflow-hidden">
+                <img class="img-fluid" src="img/latifpic.jpg" alt="" />
+              </div>
+              <div class="team-text bg-light text-center p-4">
+                <h5>Sulley Abdul Latif</h5>
+                <p class="text-primary">Web and IT Solutions Manager</p>
+                <div class="team-social text-center">
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-square" href=""
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Team End -->
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Testimonial</div>
-                <h1 class="display-6 mb-5">Trusted By Thousands Of People And Nonprofits</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/image"
-                        style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>"The Trust Hope Foundation helped me when I needed it most. Their support made a big
-                            difference in my life. I’m so grateful for everything they’ve done!"</p>
-                        <h5 class="mb-1">Akosua Boateng</h5>
-                        <span class="fst-italic">Community Leader</span>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/image"
-                        style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>"Thanks to Trust Hope Foundation, I was able to afford my education. They helped me every
-                            step of the way, and now I’m living my dream as a teacher!"</p>
-                        <h5 class="mb-1">Mensah Paul</h5>
-                        <span class="fst-italic">Teacher</span>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/image"
-                        style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>"After the storm, the Trust Hope Foundation helped our community rebuild. Their support and
-                            hard work made a real difference for us all. Thank you!"</p>
-                        <h5 class="mb-1">Owusu Thomas</h5>
-                        <span class="fst-italic">Community Organizer</span>
-                    </div>
-                </div>
-
-                <!-- Testimonial 4 -->
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4" src="img/image"
-                        style="width: 100px; height: 100px;">
-                    <div class="testimonial-text rounded text-center p-4">
-                        <p>"I worked with the Trust Hope Foundation on a food drive. They made everything run smoothly
-                            and made a real impact in our community. I’m proud to support them!"</p>
-                        <h5 class="mb-1">Emily Osie Mensah</h5>
-                        <span class="fst-italic">Volunteer Coordinator</span>
-                    </div>
-                </div>
-            </div>
-
+      <div class="container">
+        <div
+          class="text-center mx-auto mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="max-width: 500px"
+        >
+          <div
+            class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3"
+          >
+            Testimonial
+          </div>
+          <h1 class="display-6 mb-5">
+            Trusted By Thousands Of People And Nonprofits
+          </h1>
         </div>
+        <div
+          class="owl-carousel testimonial-carousel wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <!-- Testimonial 1 -->
+          <div class="testimonial-item text-center">
+            <img
+              class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+              src="img/image"
+              style="width: 100px; height: 100px"
+            />
+            <div class="testimonial-text rounded text-center p-4">
+              <p>
+                "The Trust Hope Foundation helped me when I needed it most.
+                Their support made a big difference in my life. I’m so grateful
+                for everything they’ve done!"
+              </p>
+              <h5 class="mb-1">Akosua Boateng</h5>
+              <span class="fst-italic">Community Leader</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-item text-center">
+            <img
+              class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+              src="img/image"
+              style="width: 100px; height: 100px"
+            />
+            <div class="testimonial-text rounded text-center p-4">
+              <p>
+                "Thanks to Trust Hope Foundation, I was able to afford my
+                education. They helped me every step of the way, and now I’m
+                living my dream as a teacher!"
+              </p>
+              <h5 class="mb-1">Mensah Paul</h5>
+              <span class="fst-italic">Teacher</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-item text-center">
+            <img
+              class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+              src="img/image"
+              style="width: 100px; height: 100px"
+            />
+            <div class="testimonial-text rounded text-center p-4">
+              <p>
+                "After the storm, the Trust Hope Foundation helped our community
+                rebuild. Their support and hard work made a real difference for
+                us all. Thank you!"
+              </p>
+              <h5 class="mb-1">Owusu Thomas</h5>
+              <span class="fst-italic">Community Organizer</span>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-item text-center">
+            <img
+              class="img-fluid bg-light rounded-circle p-2 mx-auto mb-4"
+              src="img/image"
+              style="width: 100px; height: 100px"
+            />
+            <div class="testimonial-text rounded text-center p-4">
+              <p>
+                "I worked with the Trust Hope Foundation on a food drive. They
+                made everything run smoothly and made a real impact in our
+                community. I’m proud to support them!"
+              </p>
+              <h5 class="mb-1">Emily Osie Mensah</h5>
+              <span class="fst-italic">Volunteer Coordinator</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Testimonial End -->
 
+    <!-- Add this HTML right before the Footer Start section -->
+    <div
+      class="modal fade birthday-modal"
+      id="birthdayModal"
+      tabindex="-1"
+      aria-labelledby="birthdayModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content birthday-card">
+          <div class="modal-body text-center p-5">
+            <button
+              type="button"
+              class="btn-close position-absolute top-0 end-0 m-3"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+            <img
+              src="img/mastercard.jpg"
+              alt="Nimoh Jephter"
+              class="birthday-image"
+            />
+            <h2 class="birthday-text mb-3">Happy Birthday!</h2>
+            <h3 class="text-primary mb-4">Nimoh Jephter</h3>
+            <p class="birthday-text lead mb-4">
+              Wishing our visionary President a day filled with joy and a year
+              ahead full of blessings! 🎉<br />
+              Thank you for your inspiring leadership and dedication!
+            </p>
+            <div class="confetti"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h1 class="fw-bold text-primary mb-4">Trust<span class="text-white">Hope</span></h1>
-                    <p>TrustHope Foundation is dedicated to fostering positive change in communities by providing
-                        essential resources and support for those in need. Our mission is to bring people together,
-                        empower individuals, and build a brighter future for all.</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-square me-1" href="" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square me-1" href="https://www.facebook.com/share/1SGkAvKVV1/?mibextid=wwXIfr"
-                            target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square me-1"
-                            href="https://www.instagram.com/trusthopefoundation2024/profilecard/?igsh=MWhhNXFrdTQwamg2cQ=="
-                            target="_blank"><i class="fab fa-instagram"></i></a>
-                        <!-- <a class="btn btn-square me-0" href="" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p><i class="fa fa-phone-alt me-3"></i>+233 549390989</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@trusthopefoundation.org</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <a class="btn btn-link" href="services.html">Our Services</a>
-                    <!-- <a class="btn btn-link" href="terms.html">Terms & Conditions</a>
+    <div
+      class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h1 class="fw-bold text-primary mb-4">
+              Trust<span class="text-white">Hope</span>
+            </h1>
+            <p>
+              TrustHope Foundation is dedicated to fostering positive change in
+              communities by providing essential resources and support for those
+              in need. Our mission is to bring people together, empower
+              individuals, and build a brighter future for all.
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-square me-1" href="" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                class="btn btn-square me-1"
+                href="https://www.facebook.com/share/1SGkAvKVV1/?mibextid=wwXIfr"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-square me-1"
+                href="https://www.instagram.com/trusthopefoundation2024/profilecard/?igsh=MWhhNXFrdTQwamg2cQ=="
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <!-- <a class="btn btn-square me-0" href="" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Address</h5>
+            <p><i class="fa fa-phone-alt me-3"></i>+233 549390989</p>
+            <p>
+              <i class="fa fa-envelope me-3"></i>info@trusthopefoundation.org
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Quick Links</h5>
+            <a class="btn btn-link" href="about.html">About Us</a>
+            <a class="btn btn-link" href="contact.html">Contact Us</a>
+            <a class="btn btn-link" href="services.html">Our Services</a>
+            <!-- <a class="btn btn-link" href="terms.html">Terms & Conditions</a>
                     <a class="btn btn-link" href="support.html">Support</a> -->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Stay updated with our latest initiatives and projects by signing up for our newsletter.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email"
-                            placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign
-                            Up</button>
-                    </div>
-                </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-light mb-4">Newsletter</h5>
+            <p>
+              Stay updated with our latest initiatives and projects by signing
+              up for our newsletter.
+            </p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input
+                class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                type="email"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                Sign Up
+              </button>
             </div>
+          </div>
         </div>
-        <div class="container-fluid copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a href="https://www.trusthopefoundation.org">trusthope Foundation</a>, All Rights
-                        Reserved.
-                    </div>
-                </div>
+      </div>
+      <div class="container-fluid copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy;
+              <a href="https://www.trusthopefoundation.org"
+                >trusthope Foundation</a
+              >, All Rights Reserved.
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -691,61 +1064,114 @@
     <!-- Paystack Script -->
     <script src="https://js.paystack.co/v1/inline.js"></script>
 
-
     <script>
-        // Toggle between email and phone input fields and change labels accordingly
-        document.getElementById('emailRadio').addEventListener('change', function () {
-            document.getElementById('emailInput').style.display = 'block';
-            document.getElementById('phoneInput').style.display = 'none';
-            document.getElementById('emailLabel').textContent = "Your Email";  // Set label to email
-            document.getElementById('phoneLabel').textContent = "Your Phone Number";  // Set label to phone
+      // Toggle between email and phone input fields and change labels accordingly
+      document
+        .getElementById("emailRadio")
+        .addEventListener("change", function () {
+          document.getElementById("emailInput").style.display = "block";
+          document.getElementById("phoneInput").style.display = "none";
+          document.getElementById("emailLabel").textContent = "Your Email"; // Set label to email
+          document.getElementById("phoneLabel").textContent =
+            "Your Phone Number"; // Set label to phone
         });
-        document.getElementById('phoneRadio').addEventListener('change', function () {
-            document.getElementById('emailInput').style.display = 'none';
-            document.getElementById('phoneInput').style.display = 'block';
-            document.getElementById('emailLabel').textContent = "Your Email (optional)";  // Adjust label to show optional for email
-            document.getElementById('phoneLabel').textContent = "Your Phone Number (required)";  // Adjust label to emphasize phone number
+      document
+        .getElementById("phoneRadio")
+        .addEventListener("change", function () {
+          document.getElementById("emailInput").style.display = "none";
+          document.getElementById("phoneInput").style.display = "block";
+          document.getElementById("emailLabel").textContent =
+            "Your Email (optional)"; // Adjust label to show optional for email
+          document.getElementById("phoneLabel").textContent =
+            "Your Phone Number (required)"; // Adjust label to emphasize phone number
         });
 
-        function payWithPaystack() {
-            const name = document.getElementById('name').value;
+      function payWithPaystack() {
+        const name = document.getElementById("name").value;
 
-            // Get the selected contact method (email or phone)
-            const contactType = document.querySelector('input[name="contactType"]:checked').id;
+        // Get the selected contact method (email or phone)
+        const contactType = document.querySelector(
+          'input[name="contactType"]:checked'
+        ).id;
 
-            // Collect the respective contact info based on selection
-            let contactInfo;
-            if (contactType === 'emailRadio') {
-                contactInfo = document.getElementById('email').value;
-            } else {
-                contactInfo = document.getElementById('phone').value;
-            }
-
-            // Get the selected donation amount
-            const selectedAmount = document.querySelector('input[name="btnradio"]:checked').nextElementSibling.textContent;
-            const amountInKobo = parseInt(selectedAmount.replace('₵', '').trim()) * 100;  // Convert cedi to kobo (1 Cedi = 100 Kobo)
-
-            const handler = PaystackPop.setup({
-                key: 'pk_test_9304447d61ec9852128c14d91f1c73b9654a1164',  // Replace with your actual Paystack public key
-                [contactType === 'emailRadio' ? 'email' : 'phone']: contactInfo,  // Conditionally use email or phone
-                amount: amountInKobo,  // The amount in kobo
-                currency: 'GHS',  // Set to Ghanaian Cedi
-                firstname: name,
-                lastname: '',  // Optional if you want to include a last name
-                onClose: function () {
-                    alert('Transaction was not completed.');
-                },
-                callback: function (response) {
-                    // You can handle success here, e.g., showing a confirmation message
-                    if (response.status === 'success') {
-                        alert('Thank you for your donation! Your payment was successful.');
-                    }
-                }
-            });
-
-            handler.openIframe();
+        // Collect the respective contact info based on selection
+        let contactInfo;
+        if (contactType === "emailRadio") {
+          contactInfo = document.getElementById("email").value;
+        } else {
+          contactInfo = document.getElementById("phone").value;
         }
-    </script>
-</body>
 
+        // Get the selected donation amount
+        const selectedAmount = document.querySelector(
+          'input[name="btnradio"]:checked'
+        ).nextElementSibling.textContent;
+        const amountInKobo =
+          parseInt(selectedAmount.replace("₵", "").trim()) * 100; // Convert cedi to kobo (1 Cedi = 100 Kobo)
+
+        const handler = PaystackPop.setup({
+          key: "pk_test_9304447d61ec9852128c14d91f1c73b9654a1164", // Replace with your actual Paystack public key
+          [contactType === "emailRadio" ? "email" : "phone"]: contactInfo, // Conditionally use email or phone
+          amount: amountInKobo, // The amount in kobo
+          currency: "GHS", // Set to Ghanaian Cedi
+          firstname: name,
+          lastname: "", // Optional if you want to include a last name
+          onClose: function () {
+            alert("Transaction was not completed.");
+          },
+          callback: function (response) {
+            // You can handle success here, e.g., showing a confirmation message
+            if (response.status === "success") {
+              alert(
+                "Thank you for your donation! Your payment was successful."
+              );
+            }
+          },
+        });
+
+        handler.openIframe();
+      }
+
+      $(document).ready(function () {
+        // Show the birthday modal on page load
+        $("#birthdayModal").modal("show");
+
+        // Add some simple confetti effect
+        function createConfetti() {
+          const colors = [
+            "#ff0000",
+            "#00ff00",
+            "#0000ff",
+            "#ffff00",
+            "#ff00ff",
+          ];
+          const confetti = document.createElement("div");
+          confetti.style.position = "absolute";
+          confetti.style.width = "10px";
+          confetti.style.height = "10px";
+          confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+          confetti.style.left = Math.random() * 100 + "%";
+          confetti.style.borderRadius = "50%";
+          confetti.style.animation = "confettiFall 3s linear";
+          document.querySelector(".confetti").appendChild(confetti);
+
+          setTimeout(() => confetti.remove(), 3000);
+        }
+
+        // Add confetti animation
+        setInterval(createConfetti, 100);
+      });
+
+      // Add confetti animation CSS
+      const style = document.createElement("style");
+      style.textContent = `
+        @keyframes confettiFall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+    `;
+      document.head.appendChild(style);
+    </script>
+  </body>
 </html>
