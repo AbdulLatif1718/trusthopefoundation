@@ -1110,7 +1110,7 @@
           parseInt(selectedAmount.replace("₵", "").trim()) * 100; // Convert cedi to kobo (1 Cedi = 100 Kobo)
 
         const handler = PaystackPop.setup({
-          key: "pk_test_9304447d61ec9852128c14d91f1c73b9654a1164", // Replace with your actual Paystack public key
+          key: "pk_live_f1261fd24a34a9db034fb36aa8d9242ae0c11de5", // Replace with your actual Paystack public key
           [contactType === "emailRadio" ? "email" : "phone"]: contactInfo, // Conditionally use email or phone
           amount: amountInKobo, // The amount in kobo
           currency: "GHS", // Set to Ghanaian Cedi
